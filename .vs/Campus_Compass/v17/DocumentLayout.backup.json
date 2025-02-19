@@ -1,0 +1,157 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\wrowl\\source\\repos\\Campus_Compass\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\source\\repos\\campus_compass\\campus_compass\\src\\components\\navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\src\\components\\navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\source\\repos\\campus_compass\\campus_compass\\src\\components\\home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\src\\components\\home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\source\\repos\\campus_compass\\campus_compass\\src\\components\\schedule.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\src\\components\\schedule.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\source\\repos\\campus_compass\\campus_compass\\src\\components\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\src\\components\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\source\\repos\\campus_compass\\campus_compass\\src\\components\\navigation.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\src\\components\\navigation.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\source\\repos\\campus_compass\\campus_compass\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\source\\repos\\campus_compass\\campus_compass\\src\\components\\faq.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\src\\components\\faq.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\source\\repos\\campus_compass\\campus_compass\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "main.jsx",
+              "DocumentMoniker": "C:\\Users\\wrowl\\source\\repos\\Campus_Compass\\campus_compass\\src\\main.jsx",
+              "RelativeDocumentMoniker": "campus_compass\\src\\main.jsx",
+              "ToolTip": "C:\\Users\\wrowl\\source\\repos\\Campus_Compass\\campus_compass\\src\\main.jsx",
+              "RelativeToolTip": "campus_compass\\src\\main.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-02-18T20:58:05.31Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Schedule.jsx",
+              "DocumentMoniker": "C:\\Users\\wrowl\\source\\repos\\Campus_Compass\\campus_compass\\src\\components\\Schedule.jsx",
+              "RelativeDocumentMoniker": "campus_compass\\src\\components\\Schedule.jsx",
+              "ToolTip": "C:\\Users\\wrowl\\source\\repos\\Campus_Compass\\campus_compass\\src\\components\\Schedule.jsx",
+              "RelativeToolTip": "campus_compass\\src\\components\\Schedule.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-02-18T21:30:26.049Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "index.css",
+              "DocumentMoniker": "C:\\Users\\wrowl\\source\\repos\\Campus_Compass\\campus_compass\\src\\components\\index.css",
+              "RelativeDocumentMoniker": "campus_compass\\src\\components\\index.css",
+              "ToolTip": "C:\\Users\\wrowl\\source\\repos\\Campus_Compass\\campus_compass\\src\\components\\index.css",
+              "RelativeToolTip": "campus_compass\\src\\components\\index.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-18T21:28:35.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Home.jsx",
+              "DocumentMoniker": "C:\\Users\\wrowl\\source\\repos\\Campus_Compass\\campus_compass\\src\\components\\Home.jsx",
+              "RelativeDocumentMoniker": "campus_compass\\src\\components\\Home.jsx",
+              "ToolTip": "C:\\Users\\wrowl\\source\\repos\\Campus_Compass\\campus_compass\\src\\components\\Home.jsx",
+              "RelativeToolTip": "campus_compass\\src\\components\\Home.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-02-18T21:43:51.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FAQ.jsx",
+              "DocumentMoniker": "C:\\Users\\wrowl\\source\\repos\\Campus_Compass\\campus_compass\\src\\components\\FAQ.jsx",
+              "RelativeDocumentMoniker": "campus_compass\\src\\components\\FAQ.jsx",
+              "ToolTip": "C:\\Users\\wrowl\\source\\repos\\Campus_Compass\\campus_compass\\src\\components\\FAQ.jsx",
+              "RelativeToolTip": "campus_compass\\src\\components\\FAQ.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-02-18T21:30:02.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Navigation.jsx",
+              "DocumentMoniker": "C:\\Users\\wrowl\\source\\repos\\Campus_Compass\\campus_compass\\src\\components\\Navigation.jsx",
+              "RelativeDocumentMoniker": "campus_compass\\src\\components\\Navigation.jsx",
+              "ToolTip": "C:\\Users\\wrowl\\source\\repos\\Campus_Compass\\campus_compass\\src\\components\\Navigation.jsx",
+              "RelativeToolTip": "campus_compass\\src\\components\\Navigation.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-02-18T21:28:49.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Navbar.jsx",
+              "DocumentMoniker": "C:\\Users\\wrowl\\source\\repos\\Campus_Compass\\campus_compass\\src\\components\\Navbar.jsx",
+              "RelativeDocumentMoniker": "campus_compass\\src\\components\\Navbar.jsx",
+              "ToolTip": "C:\\Users\\wrowl\\source\\repos\\Campus_Compass\\campus_compass\\src\\components\\Navbar.jsx",
+              "RelativeToolTip": "campus_compass\\src\\components\\Navbar.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-02-18T21:28:48.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.jsx",
+              "DocumentMoniker": "C:\\Users\\wrowl\\source\\repos\\Campus_Compass\\campus_compass\\src\\App.jsx",
+              "RelativeDocumentMoniker": "campus_compass\\src\\App.jsx",
+              "ToolTip": "C:\\Users\\wrowl\\source\\repos\\Campus_Compass\\campus_compass\\src\\App.jsx",
+              "RelativeToolTip": "campus_compass\\src\\App.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-02-18T20:54:30.24Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
