@@ -4,10 +4,12 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./index.css"
 
+
 function Navbar() {
     const navRef = useRef();
     const toggleNavbbar = () => {
         navRef.current.classList.toggle("responsive_nav");
+
     }
 
     return (

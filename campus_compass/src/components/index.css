@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
+
 }
 
 header {
@@ -12,12 +12,12 @@ header {
     justify-content: space-between;
     padding: 1rem 2rem 1rem 2rem;
     background-color: black;
-    color: white;
+    color: Yellow;
 }
 
 nav a {
     margin: 0 2rem;
-    color: white;
+    color: Yellow;
     text-decoration: none;
 }
 
@@ -29,7 +29,7 @@ header .nav-btn {
     outline: none;
     visibility: hidden;
     opacity: 0;
-    color: white;
+    color: yellow;
 }
 
 @media only screen and (max-width: 1024px) {

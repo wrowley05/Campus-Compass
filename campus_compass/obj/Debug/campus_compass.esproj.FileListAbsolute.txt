@@ -1,1 +1,3 @@
 C:\Users\wrowl\source\repos\Campus_Compass\Campus_Compass\obj\Debug\campus_compass.esproj.CoreCompileInputs.cache
+C:\Users\wrowl\source\repos\Qasim-Nazir\Campus-Compass\Campus_Compass\obj\Debug\campus_compass.esproj.CoreCompileInputs.cache
+C:\Users\wrowl\Documents\GitHub\Campus-Compass\Campus_Compass\obj\Debug\campus_compass.esproj.CoreCompileInputs.cache
