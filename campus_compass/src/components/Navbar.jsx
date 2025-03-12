@@ -18,7 +18,9 @@ function Navbar() {
             <nav ref={navRef}>
                 <Link to="/">Home</Link>
                 <Link to="/Navigation">Navigation</Link>
-                <Link to="/Schedule">Schedule</Link>
+                <Link to="/Lecturers">Lecturers</Link>
+                <Link to="/Rooms">Rooms</Link>
+                <Link to="https://www.wolvesunion.org/getinvolved/societies/list/">Societies</Link>
                 <Link to="/FAQ">FAQ</Link>
                 <button className="nav-btn nav-close-btn" onClick={toggleNavbbar}>
                     <FaTimes />
