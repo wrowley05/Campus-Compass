@@ -4,7 +4,7 @@ import Navbar from './Navbar.jsx'
 import Dropdown from 'react-bootstrap/Dropdown';
 import 'bootstrap/dist/css/bootstrap.css';
 
-const urls = ["http://10.2.0.2:8080/vgb22zx.gif", "http://10.2.0.2:8080/20250210_151049.mp4", "http://10.2.0.2:8080/CortyardToLibrary.mp4", "http://10.2.0.2:8080/CourtyardToAlanTuring.mp4"];
+const urls = ["https://mi-linux.wlv.ac.uk/~2332813/demo/vgb22zx.gif", "https://mi-linux.wlv.ac.uk/~2332813/demo/20250210_151049.mp4", "https://mi-linux.wlv.ac.uk/~2332813/demo/CortyardToLibrary.mp4", "https://mi-linux.wlv.ac.uk/~2332813/demo/CourtyardToAlanTuring.mp4"];
 
 const Navigation = () => {
     const videoRef = useRef(null);
@@ -27,7 +27,6 @@ const Navigation = () => {
 
     return (
         <div>
-            <button className="nav-btn" onClick={handleClick}>temp</button>
             <Navbar />
                 {isShown && (
                 <menu>
