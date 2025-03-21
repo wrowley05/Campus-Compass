@@ -1,14 +1,14 @@
-//Navigation.js
+//Schedule.js
 import React from 'react'
 import Navbar from './Navbar.jsx'
 
-const Home = () => {
+const Lecturers = () => {
     return (
         <div>
             <Navbar />
-            <img src="http://10.2.0.2:8080/vgb22zx.gif" />
+            <h1>Lecturer information goes here</h1>
         </div>
     )
 }
 
-export default Home
+export default Lecturers

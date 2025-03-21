@@ -2,13 +2,13 @@
 import React from 'react'
 import Navbar from './Navbar.jsx'
 
-const Schedule = () => {
+const Lecturers = () => {
     return (
         <div>
             <Navbar />
-            <h1>The schedule goes here</h1>
+            <h1>ROOOMS HERE</h1>
         </div>
     )
 }
 
-export default Schedule
+export default Lecturers
