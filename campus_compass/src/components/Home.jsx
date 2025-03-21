@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <div>
             <Navbar />
-            <img src="https://mi-linux.wlv.ac.uk/~2332813/demo/vgb22zx.gif" />
+            <img draggable = "false" src="https://mi-linux.wlv.ac.uk/~2332813/demo/vgb22zx.gif" />
         </div>
     )
 }

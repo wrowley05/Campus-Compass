@@ -37,7 +37,7 @@ const Lecturers = () => {
     return (
         <div>
             <Navbar />
-            <table>
+            <table className = "Table">
                 <thead>
                     <tr>
                         <th>Room Number</th>

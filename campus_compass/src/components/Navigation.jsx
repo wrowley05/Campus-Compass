@@ -4,11 +4,11 @@ import Navbar from './Navbar.jsx'
 import Dropdown from 'react-bootstrap/Dropdown';
 import 'bootstrap/dist/css/bootstrap.css';
 
-const urls = ["https://mi-linux.wlv.ac.uk/~2332813/demo/vgb22zx.gif", "https://mi-linux.wlv.ac.uk/~2332813/demo/20250210_151049.mp4", "https://mi-linux.wlv.ac.uk/~2332813/demo/CortyardToLibrary.mp4", "https://mi-linux.wlv.ac.uk/~2332813/demo/CourtyardToAlanTuring.mp4"];
+const urls = ["https://mi-linux.wlv.ac.uk/~2332813/demo/vgb22zx.png", "https://mi-linux.wlv.ac.uk/~2332813/demo/20250210_151049.mp4", "https://mi-linux.wlv.ac.uk/~2332813/demo/CortyardToLibrary.mp4", "https://mi-linux.wlv.ac.uk/~2332813/demo/CourtyardToAlanTuring.mp4"];
 
 const Navigation = () => {
     const videoRef = useRef(null);
-    const [videoSrc, setVideoSrc] = useState("http://10.2.0.2:8080/vgb22zx.gif");
+    const [videoSrc, setVideoSrc] = useState("https://mi-linux.wlv.ac.uk/~2332813/demo/vgb22zx.png");
 
     const changeVideoSource = (newSrc) => {
         if (videoRef.current) {
@@ -39,7 +39,7 @@ const Navigation = () => {
                         <Dropdown.Item onClick={() => window.location.reload(false)}>Reset</Dropdown.Item>
                     </Dropdown.Menu>
 
-                    <video poster={urls[0]} ref={videoRef} autoPlay muted loop >
+                    <video poster={urls[0]} ref={videoRef} autoPlay muted loop width="760px" onContextMenu={e => e.preventDefault()}>
                         <source src={videoSrc} />
                         </video>
                  </menu>
