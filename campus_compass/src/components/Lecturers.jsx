@@ -21,7 +21,6 @@ const Lecturers = () => {
 
     const DisplayData = jsonData.map(
         (item) => {
-            for (var i = 0; i < [jsonData].length; i++) {
                 return (
                     <tr key={item.teacher_id}>
                         <td>{item.name}</td>
@@ -29,14 +28,14 @@ const Lecturers = () => {
                         <td>{item.course_id}</td>
                     </tr>
                 )
-            }
         }
     )
 
     return (
-        <div>
+        <>
         <Navbar />
-        <table>
+            <div>
+                <table style={styles.table}>
             <thead>
                 <tr>
                     <th>Name</th>
@@ -49,9 +48,30 @@ const Lecturers = () => {
                 {DisplayData}
             </tbody>
             </table>
-        </div>
+            </div>
+        </>
     )
 }
 
+const styles = {
+    table: {
+        width: '100%',
+        textAlign: 'center',
+        borderCollapse: 'collapse',
+        border: '5px solid #ddd',
+        fontSize: '18px',
+        fontFamily: 'Arial, sans-serif',
+           
+    },
+    th: {
+        backgroundColor: '#f2f2f2',
+        padding: '8px',
+        textAlign: 'left',
+    },
+    td: {
+        padding: '8px',
+        borderBottom: '1px solid #ddd',
+    },
+}
 
 export default Lecturers

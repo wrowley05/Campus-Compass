@@ -4,7 +4,12 @@ import Navbar from './Navbar.jsx'
 import Dropdown from 'react-bootstrap/Dropdown';
 import 'bootstrap/dist/css/bootstrap.css';
 
-const urls = ["https://mi-linux.wlv.ac.uk/~2332813/demo/vgb22zx.png", "https://mi-linux.wlv.ac.uk/~2332813/demo/20250210_151049.mp4", "https://mi-linux.wlv.ac.uk/~2332813/demo/CortyardToLibrary.mp4", "https://mi-linux.wlv.ac.uk/~2332813/demo/CourtyardToAlanTuring.mp4"];
+const urls = ["https://mi-linux.wlv.ac.uk/~2332813/demo/vgb22zx.png", "https://mi-linux.wlv.ac.uk/~2332813/demo/CortyardToLibrary.mp4",
+    "https://mi-linux.wlv.ac.uk/~2332813/demo/20250210_151049.mp4", "https://mi-linux.wlv.ac.uk/~2332813/demo/MCrooms.mp4",
+    "https://mi-linux.wlv.ac.uk/~2332813/demo/CourtyardToAlanTuring.mp4", "https://mi-linux.wlv.ac.uk/~2332813/demo/ATrooms.mp4", 
+    "https://mi-linux.wlv.ac.uk/~2332813/demo/CourtYardToWulfruna.mp4"];
+
+const speed = 2.0;
 
 const Navigation = () => {
     const videoRef = useRef(null);
@@ -32,14 +37,17 @@ const Navigation = () => {
                 <menu>
                     <Dropdown.Menu show data-bs-theme="dark">
                         <Dropdown.Header>Buildings</Dropdown.Header>
-                        <Dropdown.Item onClick={() => changeVideoSource(urls[1])}>Millenium City</Dropdown.Item>
-                        <Dropdown.Item onClick={() => changeVideoSource(urls[2])}>Ambuka Paul</Dropdown.Item>
-                        <Dropdown.Item onClick={() => changeVideoSource(urls[3])}>Alan Turing</Dropdown.Item>
+                        <Dropdown.Item onClick={() => changeVideoSource(urls[1])}>Ambuka Paul</Dropdown.Item>
+                        <Dropdown.Item onClick={() => changeVideoSource(urls[2])}>Millenium City</Dropdown.Item>
+                        <Dropdown.Item onClick={() => changeVideoSource(urls[3])}>Millenium City Rooms</Dropdown.Item>
+                        <Dropdown.Item onClick={() => changeVideoSource(urls[4])}>Alan Turing</Dropdown.Item>
+                        <Dropdown.Item onClick={() => changeVideoSource(urls[5])}>Alan Turing Rooms</Dropdown.Item>
+                        <Dropdown.Item onClick={() => changeVideoSource(urls[6])}>Wulfruna</Dropdown.Item>
                         <Dropdown.Divider />
                         <Dropdown.Item onClick={() => window.location.reload(false)}>Reset</Dropdown.Item>
                     </Dropdown.Menu>
 
-                    <video poster={urls[0]} ref={videoRef} autoPlay muted loop width="760px" onContextMenu={e => e.preventDefault()}>
+                    <video poster={urls[0]} ref={videoRef} playbackRate={speed} autoPlay muted loop width="760px" onContextMenu={e => e.preventDefault()}>
                         <source src={videoSrc} />
                         </video>
                  </menu>
