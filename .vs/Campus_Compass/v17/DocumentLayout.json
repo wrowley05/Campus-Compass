@@ -1,0 +1,277 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\documents\\github\\campus-compass\\campus_compass\\src\\components\\scavhunt.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\src\\components\\scavhunt.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\documents\\github\\campus-compass\\campus_compass\\src\\components\\navigation.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\src\\components\\navigation.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\documents\\github\\campus-compass\\campus_compass\\src\\components\\lecturers.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\src\\components\\lecturers.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\documents\\github\\campus-compass\\campus_compass\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\documents\\github\\campus-compass\\campus_compass\\src\\components\\faq.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\src\\components\\faq.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\documents\\github\\campus-compass\\campus_compass\\src\\components\\schedule.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\src\\components\\schedule.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\documents\\github\\campus-compass\\campus_compass\\src\\components\\home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\src\\components\\home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\documents\\github\\campus-compass\\campus_compass\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\documents\\github\\campus-compass\\campus_compass\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\documents\\github\\campus-compass\\campus_compass\\src\\components\\navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\src\\components\\navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\documents\\github\\campus-compass\\campus_compass\\src\\components\\rooms.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\src\\components\\rooms.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\documents\\github\\campus-compass\\campus_compass\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\documents\\github\\campus-compass\\campus_compass\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\documents\\github\\campus-compass\\campus_compass\\campus_compass.esproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\campus_compass.esproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\documents\\github\\campus-compass\\campus_compass\\.vscode\\launch.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\.vscode\\launch.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|c:\\users\\wrowl\\documents\\github\\campus-compass\\campus_compass\\campus_compass.esproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FD9580D8-7B4B-419C-B42D-C017862ED629}|Campus_Compass\\campus_compass.esproj|solutionrelative:campus_compass\\campus_compass.esproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Lecturers.jsx",
+              "DocumentMoniker": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\components\\Lecturers.jsx",
+              "RelativeDocumentMoniker": "campus_compass\\src\\components\\Lecturers.jsx",
+              "ToolTip": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\components\\Lecturers.jsx",
+              "RelativeToolTip": "campus_compass\\src\\components\\Lecturers.jsx",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-12T14:19:38.361Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ScavHunt.jsx",
+              "DocumentMoniker": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\components\\ScavHunt.jsx",
+              "RelativeDocumentMoniker": "campus_compass\\src\\components\\ScavHunt.jsx",
+              "ToolTip": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\components\\ScavHunt.jsx",
+              "RelativeToolTip": "campus_compass\\src\\components\\ScavHunt.jsx",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAI4AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-04-03T19:54:15.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FAQ.jsx",
+              "DocumentMoniker": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\components\\FAQ.jsx",
+              "RelativeDocumentMoniker": "campus_compass\\src\\components\\FAQ.jsx",
+              "ToolTip": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\components\\FAQ.jsx",
+              "RelativeToolTip": "campus_compass\\src\\components\\FAQ.jsx",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAkwNkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-12T14:26:38.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Schedule.jsx",
+              "DocumentMoniker": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\components\\Schedule.jsx",
+              "RelativeDocumentMoniker": "campus_compass\\src\\components\\Schedule.jsx",
+              "ToolTip": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\components\\Schedule.jsx",
+              "RelativeToolTip": "campus_compass\\src\\components\\Schedule.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-04-03T19:57:58.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "vite.config.js",
+              "DocumentMoniker": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\vite.config.js",
+              "RelativeDocumentMoniker": "campus_compass\\vite.config.js",
+              "ToolTip": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\vite.config.js",
+              "RelativeToolTip": "campus_compass\\vite.config.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-17T11:44:26.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "campus_compass",
+              "DocumentMoniker": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\Campus_Compass\\campus_compass.esproj",
+              "RelativeDocumentMoniker": "Campus_Compass\\campus_compass.esproj",
+              "ToolTip": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\Campus_Compass\\campus_compass.esproj",
+              "RelativeToolTip": "Campus_Compass\\campus_compass.esproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-17T10:55:57.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "main.jsx",
+              "DocumentMoniker": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\main.jsx",
+              "RelativeDocumentMoniker": "campus_compass\\src\\main.jsx",
+              "ToolTip": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\main.jsx",
+              "RelativeToolTip": "campus_compass\\src\\main.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-16T11:21:33.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\index.html",
+              "RelativeDocumentMoniker": "campus_compass\\index.html",
+              "ToolTip": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\index.html",
+              "RelativeToolTip": "campus_compass\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-03-16T10:06:29.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "index.css",
+              "DocumentMoniker": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\index.css",
+              "RelativeDocumentMoniker": "campus_compass\\src\\index.css",
+              "ToolTip": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\index.css",
+              "RelativeToolTip": "campus_compass\\src\\index.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-16T09:54:47.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Navigation.jsx",
+              "DocumentMoniker": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\components\\Navigation.jsx",
+              "RelativeDocumentMoniker": "campus_compass\\src\\components\\Navigation.jsx",
+              "ToolTip": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\components\\Navigation.jsx",
+              "RelativeToolTip": "campus_compass\\src\\components\\Navigation.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-16T09:53:26.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Home.jsx",
+              "DocumentMoniker": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\components\\Home.jsx",
+              "RelativeDocumentMoniker": "campus_compass\\src\\components\\Home.jsx",
+              "ToolTip": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\components\\Home.jsx",
+              "RelativeToolTip": "campus_compass\\src\\components\\Home.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-12T14:30:49.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Rooms.jsx",
+              "DocumentMoniker": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\components\\Rooms.jsx",
+              "RelativeDocumentMoniker": "campus_compass\\src\\components\\Rooms.jsx",
+              "ToolTip": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\components\\Rooms.jsx",
+              "RelativeToolTip": "campus_compass\\src\\components\\Rooms.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-12T14:22:40.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "App.jsx",
+              "DocumentMoniker": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\App.jsx",
+              "RelativeDocumentMoniker": "campus_compass\\src\\App.jsx",
+              "ToolTip": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\App.jsx",
+              "RelativeToolTip": "campus_compass\\src\\App.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-12T14:20:55.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Navbar.jsx",
+              "DocumentMoniker": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\components\\Navbar.jsx",
+              "RelativeDocumentMoniker": "campus_compass\\src\\components\\Navbar.jsx",
+              "ToolTip": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\src\\components\\Navbar.jsx",
+              "RelativeToolTip": "campus_compass\\src\\components\\Navbar.jsx",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-12T14:17:01.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "launch.json",
+              "DocumentMoniker": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\.vscode\\launch.json",
+              "RelativeDocumentMoniker": "campus_compass\\.vscode\\launch.json",
+              "ToolTip": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\campus_compass\\.vscode\\launch.json",
+              "RelativeToolTip": "campus_compass\\.vscode\\launch.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-12T11:38:21.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "campus_compass.esproj",
+              "DocumentMoniker": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\Campus_Compass\\campus_compass.esproj",
+              "RelativeDocumentMoniker": "Campus_Compass\\campus_compass.esproj",
+              "ToolTip": "C:\\Users\\wrowl\\Documents\\GitHub\\Campus-Compass\\Campus_Compass\\campus_compass.esproj",
+              "RelativeToolTip": "Campus_Compass\\campus_compass.esproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-12T11:37:06.901Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
