@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project>
   <PropertyGroup>
-    <PackageJsonHomepage Condition="$(PackageJsonHomepage) == ''">https://wrowley05.github.io/Campus-Compass/</PackageJsonHomepage>
+    <PackageJsonHomepage Condition="$(PackageJsonHomepage) == ''">http://localhost/demo</PackageJsonHomepage>
     <PackageJsonName Condition="$(PackageJsonName) == ''">campus_compass</PackageJsonName>
     <PackageJsonPrivate Condition="$(PackageJsonPrivate) == ''">true</PackageJsonPrivate>
     <PackageJsonVersion Condition="$(PackageJsonVersion) == ''">0.0.0</PackageJsonVersion>

@@ -7,7 +7,7 @@ const Verification = () => {
     const handleVerification = () => {
         const pass = document.getElementById('pass').value;
         if (pass === "admin") {
-            window.location.href = '/Admin';
+            window.location.href = '/demo/#/Admin';
         } else {
             alert("Incorrect password");
         }

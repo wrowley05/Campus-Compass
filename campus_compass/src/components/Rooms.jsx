@@ -8,7 +8,7 @@ const Rooms = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://mi-linux.wlv.ac.uk/~2332813/demo/index.php?q=Classrooms');
+                const response = await fetch('https://mi-linux.wlv.ac.uk/~2332813/demo/server/index.php?q=Classrooms');
                 const data = await response.json();
                 setjsonData(data);
             } catch (error) {
