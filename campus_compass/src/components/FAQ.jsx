@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar.jsx';
+import { Button } from 'bootstrap';
 
 const FAQ = () => {
     // useState hook to track which FAQ's answer is currently expanded
     const [activeIndex, setActiveIndex] = useState(null);
+
+    // useState hook to manage the message input by the user
+    const [message, setMessage] = useState('');
 
     // Define FAQs with answers as JSX elements, allowing you to embed links neatly
     const faqs = [
@@ -161,6 +165,31 @@ const FAQ = () => {
         setActiveIndex(index === activeIndex ? null : index);
     };
 
+    // Function to handle the message submission
+    const handleSubmit = (message) => {
+        // Check if the message is empty
+        if (message.trim() === '') {
+            alert('Please enter a message before submitting.');
+            return;
+        }
+
+
+        // Send the message to the server using jQuery's AJAX method
+        
+ //       $.ajax({
+ //           type: 'POST',
+  //          url: 'https://mi-linux.wlv.ac.uk/~2332813/demo/push.php',
+ //           data: { message: message },
+ //           success: function (response) {
+//                console.log('Message sent successfully:', response);
+ //           },
+ //           error: function (error) {
+ //               console.error('Error sending message:', error);
+ //           },
+ //       });
+
+    }
+
     return (
         <>
             {/* Render Navbar across the full width at the top */}
@@ -179,7 +208,20 @@ const FAQ = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+                <h1 style={styles.heading}>Contact Us</h1>
+
+                <div style={styles.contactInfo}>
+
+                    If you have any further questions, feel free to reach out to us anonamously using the field below or at [INSERT SUPPORT EMAIL HERE].
+                    <br />
+                    <textarea style={styles.messageBox}
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        placeholder="Enter text here..."
+                    />
+                    <button onClick={() => handleSubmit(message)} >Submit</button>
+                </div>
+                </div>
         </>
     );
 };
@@ -196,6 +238,7 @@ const styles = {
     heading: {
         textAlign: 'center',
         marginBottom: '20px',
+        marginTop: '20px',
         fontSize: '24px',
         color: '#333',
     },
@@ -225,6 +268,28 @@ const styles = {
         marginTop: '10px',
         paddingLeft: '15px',
         color: '#555',
+        fontSize: '16px',
+    },
+    // Styling for the contact information
+    contactInfo: {
+        marginTop: '20px',
+        fontSize: '16px',
+        color: '#333',
+        padding: '10px',
+        border: '1px solid #ddd',
+        borderRadius: '8px',
+        backgroundColor: '#f9f9f9',
+        boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+        textAlign: 'center',
+    },
+    // Styling for the message input box
+    messageBox: {
+        width: '100%',
+        height: '100px',
+        padding: '10px',
+        borderRadius: '4px',
+        border: '1px solid #ddd',
+        marginTop: '10px',
         fontSize: '16px',
     },
 };

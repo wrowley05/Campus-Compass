@@ -34,9 +34,9 @@ const Lecturers = () => {
     return (
         <>
         <Navbar />
-            <div>
+            <div style={styles.mainContainer}>
                 <table style={styles.table}>
-            <thead>
+                    <thead style={styles.thead}>
                 <tr>
                     <th>Name</th>
                     <th>Email</th>
@@ -54,23 +54,24 @@ const Lecturers = () => {
 }
 
 const styles = {
+    // Centers the table content and adds some padding
+    mainContainer: {
+        maxWidth: '600px',
+        margin: '0px auto 30px',
+        padding: '20px',
+        fontFamily: 'Arial, sans-serif',
+    },
     table: {
         width: '100%',
-        textAlign: 'center',
-        borderCollapse: 'collapse',
         border: '5px solid #ddd',
-        fontSize: '18px',
-        fontFamily: 'Arial, sans-serif',
-           
+        borderCollapse: 'collapse',
+        borderRadius: '8px',
+        boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+
     },
-    th: {
+    thead: {
         backgroundColor: '#f2f2f2',
-        padding: '8px',
-        textAlign: 'left',
-    },
-    td: {
-        padding: '8px',
-        borderBottom: '1px solid #ddd',
+        borderBottom: '2px solid #ddd',
     },
 }
 
