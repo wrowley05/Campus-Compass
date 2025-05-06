@@ -35,9 +35,10 @@ const Schedule = () => {
     return (
         <div>
             <Navbar />
-            <table className="Table">
-                <thead>
-                    <tr>
+            <div style={styles.mainContainer}>
+                <table style={styles.table}>
+                    <thead style={styles.thead}>
+                        <tr>
                         <th>Lecture Time</th>
                         <th>Topic</th>
                         <th>Lecturer</th>
@@ -45,12 +46,34 @@ const Schedule = () => {
                     </tr>
                 </thead>
 
-                <tbody>
+                    <tbody style={styles.tbody}>
                     {DisplayData}
                 </tbody>
             </table>
         </div>
+        </div>
     )
 }
 
+const styles = {
+    // Centers the table content and adds some padding
+    mainContainer: {
+        maxWidth: '600px',
+        margin: '0px auto 30px',
+        padding: '20px',
+        fontFamily: 'Arial, sans-serif',
+    },
+    table: {
+        width: '100%',
+        border: '5px solid #ddd',
+        borderCollapse: 'collapse',
+        borderRadius: '8px',
+        boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+
+    }, 
+    thead: {
+        backgroundColor: '#f2f2f2',
+        borderBottom: '2px solid #ddd',
+    },
+}
 export default Schedule

@@ -16,7 +16,9 @@ const Scav = () => {
 				{ answerText: '1897', isCorrect: false },
 			],
 			hint: 'This year was the first time the university was established as a Tradesmen and Mechanics Institute.',
-			clue: 'TEMP1'
+			clue: 'Starting at the Courtyard use the Passcode provided at the sign.',
+			pass: '1234',
+			img: 'https://mi-linux.wlv.ac.uk/~2332813/demo/Courtyard.png'
 		},
 		{
 			questionText: 'How many University Campuses are there?',
@@ -27,7 +29,9 @@ const Scav = () => {
 				{ answerText: '1', isCorrect: false },
 			],
 			hint: 'Temp',
-            clue: 'TEMP2'
+			clue: 'Go to the location shown in the below picture at Millenium City for the passcode.',
+			pass: '1234',
+			img: 'https://mi-linux.wlv.ac.uk/~2332813/demo/MilleniumCity.jpg'
 		},
 		{
 			questionText: 'Which Building Contains the Library?',
@@ -38,10 +42,12 @@ const Scav = () => {
 				{ answerText: 'Wulfrina', isCorrect: false },
 			],
 			hint: 'This building is named the after the daughter of a famous Indian philanthropist.',
-            clue: 'TEMP3'
+			clue: 'Next head to the location shown in the below picture at Ambika Paul for the passcode.',
+			pass: '1234',
+			img: 'https://mi-linux.wlv.ac.uk/~2332813/demo/Library.jpg'
 		},
 		{
-			questionText: 'How many students are there currently enroled in this University Globally',
+			questionText: 'How many students are there currently enroled in this University Globally?',
 			answerOptions: [
 				{ answerText: '12,000', isCorrect: false },
 				{ answerText: '50,000', isCorrect: false },
@@ -49,7 +55,9 @@ const Scav = () => {
 				{ answerText: '25,000', isCorrect: true },
 			],
 			hint: 'This is the number of students enroled in 2025',
-            clue: 'TEMP4'
+			clue: 'Go to the location shown in the below picture at Wulfruna Building for the passcode.',
+			pass: '1234',
+			img: 'https://mi-linux.wlv.ac.uk/~2332813/demo/WulfrunaBuilding.jpg'
 		},
 	];
 
@@ -59,24 +67,34 @@ const Scav = () => {
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
 	const [incorrect, setIsIncorrect] = useState(null);
+	const [passCode, setPassCode] = useState('');
 
 	const handleAnswerOptionClick = (isCorrect) => {
 		if (isCorrect) {
-			setScore(score + 1);
+			if (passCode === questions[currentQuestion].pass) {
+				setScore(score + 1);
 
 
-			const nextQuestion = currentQuestion + 1;
-			if (nextQuestion < questions.length) {
-				setCurrentQuestion(nextQuestion);
-			} else {
-				setShowScore(true);
+				const nextQuestion = currentQuestion + 1;
+				if (nextQuestion < questions.length) {
+					setCurrentQuestion(nextQuestion);
+				} else {
+					setShowScore(true);
+				}
+            } else {
+                setIsIncorrect("Incorrect Password");
+                setTimeout(() => {
+                    setIsIncorrect(null);
+				}, 5000);
 			}
-		} else {
-			setIsIncorrect("Incorrect");
-            setTimeout(() => {
-                setIsIncorrect(null);
-            }, 3000);
 
+			} else {
+				setIsIncorrect("Incorrect Answer");
+				setTimeout(() => {
+					setIsIncorrect(null);
+				}, 2500);
+
+			
 		}
 	};
 
@@ -96,17 +114,28 @@ const Scav = () => {
 								<div style={style.questionCount}>
 							<span>Question {currentQuestion + 1}</span>/{questions.length}
 								</div>
-						<div style={style.questionText}>
+								<div style={style.questionText}>
+									<br></br>
 								{questions[currentQuestion].clue}
-                                <br></br>
-								{questions[currentQuestion].questionText}</div>
+									<br></br>
+									<br></br>
+									<img draggable="false" width = '400px' height = '300px' src={questions[currentQuestion].img} />
+									<br></br>
+									<br></br>
+									<label>
+										PassCode: <input value={passCode} onChange={e => setPassCode(e.target.value)} />
+									</label>
+									<br></br>
+                                    <br></br>
+									{questions[currentQuestion].questionText}
+								</div>
 					</div>
 							<div style={style.answerSection}>
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
 							<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
 						))}
-						</div>
-						{incorrect }
+								{incorrect}
+							</div>
 
 				</>
 			)}
@@ -127,17 +156,18 @@ const style = {
 	answerSection: {
 		display: 'flex',
 		flexDirection: 'column',
-		gap: '10px',
-		marginTop: '20px',
+		gap: '30px',
+		marginTop: '50px',
 		border: '1px solid #ddd',
-		borderRadius: '8px',
+		borderRadius: '1px',
 		overflow: 'hidden',
 		boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+        alignItems: 'center',
 	},
 
     button: {
         padding: '10px',
-        margin: '5px',
+        margin: '10px',
         backgroundColor: '#4CAF50',
         color: 'white',
         border: 'none',

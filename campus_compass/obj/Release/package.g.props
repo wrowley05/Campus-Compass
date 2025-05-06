@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project>
   <PropertyGroup>
-    <PackageJsonHomepage Condition="$(PackageJsonHomepage) == ''">https://mi-linux.wlv.ac.uk/~2332813/dist/</PackageJsonHomepage>
+    <PackageJsonHomepage Condition="$(PackageJsonHomepage) == ''">https://wrowley05.github.io/Campus-Compass/</PackageJsonHomepage>
     <PackageJsonName Condition="$(PackageJsonName) == ''">campus_compass</PackageJsonName>
     <PackageJsonPrivate Condition="$(PackageJsonPrivate) == ''">true</PackageJsonPrivate>
     <PackageJsonVersion Condition="$(PackageJsonVersion) == ''">0.0.0</PackageJsonVersion>
@@ -10,6 +10,8 @@
     <PackageJsonScriptsBuild Condition="$(PackageJsonScriptsBuild) == ''">vite build</PackageJsonScriptsBuild>
     <PackageJsonScriptsLint Condition="$(PackageJsonScriptsLint) == ''">eslint .</PackageJsonScriptsLint>
     <PackageJsonScriptsPreview Condition="$(PackageJsonScriptsPreview) == ''">vite preview</PackageJsonScriptsPreview>
+    <PackageJsonScriptsPredeploy Condition="$(PackageJsonScriptsPredeploy) == ''">npm run build</PackageJsonScriptsPredeploy>
+    <PackageJsonScriptsDeploy Condition="$(PackageJsonScriptsDeploy) == ''">gh-pages -d build</PackageJsonScriptsDeploy>
     <PackageJsonDependenciesReact Condition="$(PackageJsonDependenciesReact) == ''">^19.0.0</PackageJsonDependenciesReact>
     <PackageJsonDependenciesReactDom Condition="$(PackageJsonDependenciesReactDom) == ''">^19.0.0</PackageJsonDependenciesReactDom>
     <PackageJsonDevdependenciesEslintJs Condition="$(PackageJsonDevdependenciesEslintJs) == ''">^9.19.0</PackageJsonDevdependenciesEslintJs>
@@ -20,6 +22,7 @@
     <PackageJsonDevdependenciesEslintPluginReact Condition="$(PackageJsonDevdependenciesEslintPluginReact) == ''">^7.37.4</PackageJsonDevdependenciesEslintPluginReact>
     <PackageJsonDevdependenciesEslintPluginReactHooks Condition="$(PackageJsonDevdependenciesEslintPluginReactHooks) == ''">^5.0.0</PackageJsonDevdependenciesEslintPluginReactHooks>
     <PackageJsonDevdependenciesEslintPluginReactRefresh Condition="$(PackageJsonDevdependenciesEslintPluginReactRefresh) == ''">^0.4.18</PackageJsonDevdependenciesEslintPluginReactRefresh>
+    <PackageJsonDevdependenciesGhPages Condition="$(PackageJsonDevdependenciesGhPages) == ''">^6.3.0</PackageJsonDevdependenciesGhPages>
     <PackageJsonDevdependenciesGlobals Condition="$(PackageJsonDevdependenciesGlobals) == ''">^15.14.0</PackageJsonDevdependenciesGlobals>
     <PackageJsonDevdependenciesVite Condition="$(PackageJsonDevdependenciesVite) == ''">^6.1.0</PackageJsonDevdependenciesVite>
   </PropertyGroup>
