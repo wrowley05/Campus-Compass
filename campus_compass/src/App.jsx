@@ -9,6 +9,7 @@ import Rooms from "./components/Rooms.jsx"
 import ScavHunt from "./components/ScavHunt.jsx"
 import FAQ from "./components/FAQ.jsx"
 import Admin from "./components/Admin.jsx"
+import Verification from "./components/Verification.jsx"
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                 <Route path='/ScavHunt' element={<ScavHunt />} />
                 <Route path='/FAQ' element={<FAQ />} />
                 <Route path='/Admin' element={<Admin />} />
+                <Route path='/Verification' element={<Verification />} />
             </Routes>
         </div>
     );

@@ -24,7 +24,7 @@ function Navbar() {
                 <Link to="/Rooms">Rooms</Link>
                 <Link to="https://www.wolvesunion.org/getinvolved/societies/list/">Societies</Link>
                 <Link to="/FAQ">FAQ / Feedback</Link>
-                <Link to="/Admin">Admin</Link>
+                <Link to="/Verification">Admin</Link>
                 <button className="nav-btn nav-close-btn" onClick={toggleNavbbar}>
                     <FaTimes />
                 </button>
