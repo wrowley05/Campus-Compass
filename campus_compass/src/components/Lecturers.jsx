@@ -1,6 +1,6 @@
 //Lecturers.js
-import {useState, useEffect} from 'react'
-import Navbar from './Navbar.jsx'
+import { useState, useEffect } from 'react';
+import Navbar from './Navbar.jsx';
 
 const Lecturers = () => {
     const [jsonData, setjsonData] = useState([]);
@@ -19,60 +19,96 @@ const Lecturers = () => {
         fetchData();
     }, []);
 
-    const DisplayData = jsonData.map(
-        (item) => {
-                return (
-                    <tr key={item.teacher_id}>
-                        <td>{item.name}</td>
-                        <td>{item.email}</td>
-                        <td>{item.course_id}</td>
-                    </tr>
-                )
-        }
-    )
-
     return (
         <>
-        <Navbar />
+            <Navbar />
             <div style={styles.mainContainer}>
-                <table style={styles.table}>
-                    <thead style={styles.thead}>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Course_ID</th>
-                </tr>
-            </thead>
+                {/* Page Header */}
+                <h1 style={styles.header}>Open Day Lecturers</h1>
+                <p style={styles.description}>
+                    Below is a list of lecturers participating in the Open Day, including their names, emails, and associated courses.
+                </p>
 
-            <tbody>
-                {DisplayData}
-            </tbody>
-            </table>
+                {/* Scrollable Table Container */}
+                <div style={styles.tableContainer}>
+                    <table style={styles.table}>
+                        <thead style={styles.thead}>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Course ID</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {jsonData.map((item) => (
+                                <tr key={item.teacher_id}>
+                                    <td>{item.name}</td>
+                                    <td>{item.email}</td>
+                                    <td>{item.course_id}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </>
-    )
-}
+    );
+};
 
 const styles = {
-    // Centers the table content and adds some padding
     mainContainer: {
-        maxWidth: '600px',
-        margin: '0px auto 30px',
-        padding: '20px',
+        width: '90%',
+        maxWidth: '800px',
+        margin: '20px auto',
+        padding: '0px',
         fontFamily: 'Arial, sans-serif',
     },
-    table: {
+
+    header: {
+        textAlign: 'center',
+        fontSize: '28px',
+        fontWeight: 'bold',
+        marginBottom: '10px',
+    },
+
+    description: {
+        textAlign: 'center',
+        fontSize: '18px',
+        color: '#555',
+        marginBottom: '20px',
+    },
+
+    // Scrollable container for the table
+    tableContainer: {
+        overflowX: 'auto', // Enables horizontal scrolling
         width: '100%',
-        border: '5px solid #ddd',
+        maxWidth: '100vw', // Allows full viewport width
+    },
+
+    table: {
+        minWidth: '800px', // Forces the table to be wider than the container
+        border: '2px solid #ddd',
         borderCollapse: 'collapse',
         borderRadius: '8px',
         boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-
     },
+
     thead: {
         backgroundColor: '#f2f2f2',
         borderBottom: '2px solid #ddd',
     },
-}
 
-export default Lecturers
+    th: {
+        padding: '10px',
+        textAlign: 'left',
+        fontSize: '18px',
+    },
+
+    td: {
+        padding: '8px',
+        fontSize: '16px',
+        wordBreak: 'break-word',
+    },
+};
+
+export default Lecturers;

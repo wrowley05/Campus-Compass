@@ -1,6 +1,6 @@
 //Schedule.js
-import { useState, useEffect } from 'react'
-import Navbar from './Navbar.jsx'
+import { useState, useEffect } from 'react';
+import Navbar from './Navbar.jsx';
 
 const Schedule = () => {
     const [jsonData, setjsonData] = useState([]);
@@ -19,61 +19,102 @@ const Schedule = () => {
         fetchData();
     }, []);
 
-    const DisplayData = jsonData.map(
-        (item) => {
-            return (
-                <tr key={item.lecture_id}>
-                    <td>{item.lecture_time}</td>
-                    <td>{item.topic}</td>
-                    <td>{item.teacher_id}</td>
-                    <td>{item.course_id}</td>
-                </tr>
-            )
-        }
-    )
-
     return (
         <div>
             <Navbar />
             <div style={styles.mainContainer}>
-                <table style={styles.table}>
-                    <thead style={styles.thead}>
-                        <tr>
-                        <th>Lecture Time</th>
-                        <th>Topic</th>
-                        <th>Lecturer</th>
-                        <th>Course ID</th>
-                    </tr>
-                </thead>
+                {/* Page Header */}
+                <h1 style={styles.header}>Open Day Lecture Schedule</h1>
+                <p style={styles.description}>
+                    Below is the schedule of lectures for the Open Day, including their times, topics, lecturers, and associated courses.
+                </p>
 
-                    <tbody style={styles.tbody}>
-                    {DisplayData}
-                </tbody>
-            </table>
+                {/* Scrollable Table Container */}
+                <div style={styles.tableContainer}>
+                    <table style={styles.table}>
+                        <thead style={styles.thead}>
+                            <tr>
+                                <th style={styles.th}>Lecture Time</th>
+                                <th style={styles.th}>Topic</th>
+                                <th style={styles.th}>Lecturer</th>
+                                <th style={styles.th}>Course ID</th>
+                            </tr>
+                        </thead>
+                        <tbody style={styles.tbody}>
+                            {jsonData.map((item) => (
+                                <tr key={item.lecture_id}>
+                                    <td style={styles.td}>{item.lecture_time}</td>
+                                    <td style={styles.td}>{item.topic}</td>
+                                    <td style={styles.td}>{item.teacher_id}</td>
+                                    <td style={styles.td}>{item.course_id}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-        </div>
-    )
-}
+    );
+};
 
 const styles = {
-    // Centers the table content and adds some padding
     mainContainer: {
-        maxWidth: '600px',
-        margin: '0px auto 30px',
-        padding: '20px',
+        width: '90%',
+        maxWidth: '800px',
+        margin: '20px auto',
+        padding: '0px',
         fontFamily: 'Arial, sans-serif',
     },
-    table: {
+
+    header: {
+        textAlign: 'center',
+        fontSize: '28px',
+        fontWeight: 'bold',
+        marginBottom: '10px',
+    },
+
+    description: {
+        textAlign: 'center',
+        fontSize: '18px',
+        color: '#555',
+        marginBottom: '20px',
+    },
+
+    // Scrollable container for the table
+    tableContainer: {
+        overflowX: 'auto', // Enables horizontal scrolling
         width: '100%',
-        border: '5px solid #ddd',
+        maxWidth: '100vw', // Allows full viewport width
+    },
+
+    table: {
+        minWidth: '800px', // Forces the table to be wider than the container
+        border: '2px solid #ddd',
         borderCollapse: 'collapse',
         borderRadius: '8px',
         boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+    },
 
-    }, 
     thead: {
         backgroundColor: '#f2f2f2',
         borderBottom: '2px solid #ddd',
     },
-}
-export default Schedule
+
+    tbody: {
+        fontSize: '16px',
+    },
+
+    th: {
+        padding: '10px',
+        textAlign: 'left',
+        fontSize: '18px',
+    },
+
+    td: {
+        padding: '8px',
+        fontSize: '16px',
+        wordBreak: 'break-word',
+    },
+};
+
+export default Schedule;

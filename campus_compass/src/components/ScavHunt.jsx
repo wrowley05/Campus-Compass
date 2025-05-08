@@ -1,5 +1,5 @@
 //FAQ.js
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Navbar from './Navbar.jsx'
 import "./index.css"
 
@@ -111,16 +111,15 @@ const Scav = () => {
 			) : (
 				<>
 					<div style={style.questionSection}>
-								<div style={style.questionCount}>
+						<div style={style.questionCount}>
 							<span>Question {currentQuestion + 1}</span>/{questions.length}
-								</div>
+						</div>
 								<div style={style.questionText}>
 									<br></br>
 								{questions[currentQuestion].clue}
 									<br></br>
 									<br></br>
-									<img draggable="false" width = '400px' height = '300px' src={questions[currentQuestion].img} />
-									<br></br>
+									<img draggable="false" style={style.image} src={questions[currentQuestion].img} />									<br></br>
 									<br></br>
 									<label>
 										PassCode: <input value={passCode} onChange={e => setPassCode(e.target.value)} />
@@ -132,8 +131,7 @@ const Scav = () => {
 					</div>
 							<div style={style.answerSection}>
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
-							<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
-						))}
+							<button style={style.button} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>						))}
 								{incorrect}
 							</div>
 
@@ -145,43 +143,56 @@ const Scav = () => {
 }
 
 const style = {
+    mainContainer: {
+        width: '90%', // Use percentage instead of fixed width
+        maxWidth: '600px',
+        margin: '0 auto',
+        padding: '20px',
+        fontFamily: 'Arial, sans-serif',
+        textAlign: 'center', // Center content
+    },
 
-	mainContainer: {
-		maxWidth: '600px',
-		margin: '0px auto 20px',
-		padding: '20px',
-		fontFamily: 'Arial, sans-serif',
-	},
-
-	answerSection: {
-		display: 'flex',
-		flexDirection: 'column',
-		gap: '30px',
-		marginTop: '50px',
-		border: '1px solid #ddd',
-		borderRadius: '1px',
-		overflow: 'hidden',
-		boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+    answerSection: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '20px',
+        marginTop: '30px',
+        border: '1px solid #ddd',
+        borderRadius: '5px',
+        overflow: 'hidden',
+        boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
         alignItems: 'center',
-	},
+        padding: '10px',
+    },
 
     button: {
-        padding: '10px',
-        margin: '10px',
-        backgroundColor: '#4CAF50',
-        color: 'white',
+        padding: '12px',
+        width: '80%', // Make buttons responsive
+        maxWidth: '300px',
+        backgroundColor: '#FCEE32',
+        color: 'black',
         border: 'none',
         borderRadius: '5px',
-		cursor: 'pointer',
-	},
+        cursor: 'pointer',
+        fontSize: '16px',
+    },
 
-	questionSection: {
-		border: '1px solid #ddd',
+    questionSection: {
+        border: '1px solid #ddd',
         display: 'flex',
-		fontSize: '18px',
-		fontWeight: 'bold',
-		color: '#333',
-	},
-}
+        flexDirection: 'column', // Stack items vertically
+        fontSize: '18px',
+        fontWeight: 'bold',
+        color: '#333',
+        padding: '15px',
+    },
+
+    image: {
+        width: '100%', // Make images responsive
+        maxWidth: '400px',
+        height: 'auto',
+        borderRadius: '5px',
+    }
+};
 
 export default Scav

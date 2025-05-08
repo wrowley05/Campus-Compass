@@ -170,25 +170,25 @@ const FAQ = () => {
         // Check if the message is empty
         if (message.trim() === '') {
             alert('Please enter a message before submitting.');
-            return;
         }
 
-
-        // Send the message to the server using jQuery's AJAX method
-        
- //       $.ajax({
- //           type: 'POST',
-  //          url: 'https://mi-linux.wlv.ac.uk/~2332813/demo/push.php',
- //           data: { message: message },
- //           success: function (response) {
-//                console.log('Message sent successfully:', response);
- //           },
- //           error: function (error) {
- //               console.error('Error sending message:', error);
- //           },
- //       });
+        fetch('https://mi-linux.wlv.ac.uk/~2332813/demo/server/post.php?q=Feedback', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(message)
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
 
     }
+
 
     return (
         <>
