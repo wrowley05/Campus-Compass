@@ -8,7 +8,7 @@ const Schedule = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://mi-linux.wlv.ac.uk/~2332813/demo/server/index.php?q=OpenDayLectures');
+                const response = await fetch('http://localhost/server/index.php?q=Lectures');
                 const data = await response.json();
                 setjsonData(data);
             } catch (error) {

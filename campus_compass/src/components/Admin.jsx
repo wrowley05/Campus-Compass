@@ -10,7 +10,7 @@ const Admin = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://mi-linux.wlv.ac.uk/~2332813/demo/server/index.php?q=OpenDayLectures');
+                const response = await fetch('http://localhost/server/index.php?q=Lectures');
                 const data = await response.json();
                 setjsonScheduleData(data);
             } catch (error) {
@@ -24,13 +24,14 @@ const Admin = () => {
     const DisplayScheduleData = jsonScheduleData.map(
         (item) => {
             return (
-                <tr key={item.lecture_id}>
+                <tr key={item.id}>
+                    <td>{item.id}</td>
                     <td>{item.lecture_time}</td>
                     <td>{item.topic}</td>
                     <td>{item.teacher_id}</td>
                     <td>{item.course_id}</td>
                     <td>
-                        <button onClick={() => handleDeleteSchedule(item.lecture_id)}>Delete</button>
+                        <button onClick={() => handleDeleteSchedule(item.id)}>Delete</button>
                     </td>
                 </tr>
             )
@@ -43,7 +44,7 @@ const Admin = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://mi-linux.wlv.ac.uk/~2332813/demo/server/index.php?q=Classrooms');
+                const response = await fetch('http://localhost/server/index.php?q=Classrooms');
                 const data = await response.json();
                 setjsonClassroomData(data);
             } catch (error) {
@@ -57,13 +58,14 @@ const Admin = () => {
     const DisplayClassroomData = jsonClassroomData.map(
         (item) => {
                 return (
-                    <tr key={item.classroom_id}>
+                    <tr key={item.id}>
+                        <td>{item.id}</td>
                         <td>{item.room_number}</td>
                         <td>{item.building_id}</td>
                         <td>{item.capacity}</td>
                         <td>{item.course_id}</td>
                         <td>
-                            <button onClick={() => handleDeleteClassroom(item.classroom_id)}> Delete</button>
+                            <button onClick={() => handleDeleteClassroom(item.id)}> Delete</button>
                         </td>
                     </tr>
                 )
@@ -74,7 +76,7 @@ const Admin = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://mi-linux.wlv.ac.uk/~2332813/demo/server/index.php?q=Teachers');
+                const response = await fetch('http://localhost/server/index.php?q=Teachers');
                 const data = await response.json();
                 setjsonLecturerData(data);
             } catch (error) {
@@ -88,12 +90,13 @@ const Admin = () => {
     const DisplayLecturerData = jsonLecturerData.map(
         (item) => {
             return (
-                <tr key={item.teacher_id}>
+                <tr key={item.id}>
+                    <td>{item.id}</td>
                     <td>{item.name}</td>
                     <td>{item.email}</td>
                     <td>{item.course_id}</td>
                     <td>
-                        <button onClick={() => handleDeleteLecturer(item.teacher_id)}>Delete</button>
+                        <button onClick={() => handleDeleteLecturer(item.id)}>Delete</button>
                     </td>
                 </tr>
             )
@@ -101,84 +104,71 @@ const Admin = () => {
     )
 
     const handleAddSchedule = () => {
-        // Logic to add a new schedule
-        // You can use a form to collect the data and then send it to the server
-         const newSchedule = {
-             lecture_time: document.getElementById('time').value,
-             topic: document.getElementById('topic').value,
-             teacher_id: document.getElementById('lecturer_id').value,
-             course_id: document.getElementById('course_id').value,
+        const newSchedule = {
+            lecture_time: document.getElementById('time').value,
+            topic: document.getElementById('topic').value,
+            teacher_id: document.getElementById('lecturer_id').value,
+            course_id: document.getElementById('course_id').value
         };
-
+        // Send the new schedule to the server
+        fetch('http://localhost/server/post.php?q=Lectures', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newSchedule)
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                setjsonScheduleData([...jsonScheduleData, newSchedule]);
+            })
         // Clear the input fields after adding the schedule
         document.getElementById('time').value = '';
         document.getElementById('topic').value = '';
         document.getElementById('lecturer_id').value = '';
         document.getElementById('course_id').value = '';
-        // Send the new schedule to the server
-
-         fetch('https://mi-linux.wlv.ac.uk/~2332813/demo/server/post.php?q=Schedule', {
-             method: 'POST',
-             headers: {
-                 'Content-Type': 'application/json'
-             },
-             body: JSON.stringify(newSchedule)
-         })
-             .then(response => response.json())
-             .then(data => {
-                 console.log('Success:', data);
-                 setjsonScheduleData([...jsonScheduleData, data]);
-             })
-             .catch((error) => {
-                 console.error('Error:', error);
-            });
-
     }
+
+
+
     const handleAddClassroom = () => {
-        // Logic to add a new classroom
-        const newClassroom = {
+        const newRoom = {
             room_number: document.getElementById('room_number').value,
             building_id: document.getElementById('building_id').value,
             capacity: document.getElementById('capacity').value,
-            course_id: document.getElementById('course_id').value,
+            course_id: document.getElementById('course_c_id').value
         };
-        // Clear the input fields after adding the classroom
-        document.getElementById('room_number').value = '';
-        document.getElementById('building_id').value = '';
-        document.getElementById('capacity').value = '';
-        document.getElementById('course_c_id').value = '';
-        // Send the new classroom to the server
-        fetch('https://mi-linux.wlv.ac.uk/~2332813/demo/server/post.php?q=Classrooms', {
+        // Send the new room to the server
+        fetch('http://localhost/server/post.php?q=Classrooms', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(newClassroom)
+            body: JSON.stringify(newRoom)
         })
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
-                setjsonClassroomData([...jsonClassroomData, data]);
+                setjsonClassroomData([...jsonClassroomData, newRoom]);
             })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
-
+        // Clear the input fields after adding the lecturer
+        document.getElementById('room_number').value = '';
+        document.getElementById('building_id').value = '';
+        document.getElementById('capacity').value = '';
+        document.getElementById('course_c_id').value = '';
     }
 
+
     const handleAddLecturer = () => {
-        // Logic to add a new lecturer
         const newLecturer = {
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
-            course_id: document.getElementById('course_id').value,
+            course_id: document.getElementById('course_l_id').value
         };
-        // Clear the input fields after adding the lecturer
-        document.getElementById('name').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('course_l_id').value = '';
+
         // Send the new lecturer to the server
-        fetch('https://mi-linux.wlv.ac.uk/~2332813/demo/server/post.php?q=Teachers', {
+        fetch('http://localhost/server/post.php?q=Teachers', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -188,61 +178,75 @@ const Admin = () => {
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
-                setjsonLecturerData([...jsonLecturerData, data]);
+                setjsonLecturerData([...jsonLecturerData, newLecturer]);
             })
-            .catch((error) => {
+        // Clear the input fields after adding the lecturer
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('course_l_id').value = '';
+    }
+
+
+    const handleDeleteSchedule = (id) => {
+        // Logic to delete a schedule
+        fetch('http://localhost/server/deleteRecord.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                table: 'lectures',
+                id: id
+            })
+        })
+            .then(res => res.json())
+            .then(data => {
+                setjsonScheduleData(jsonScheduleData.filter(item => item.id !== id));
+            })
+            .catch(error => {
                 console.error('Error:', error);
             });
     }
 
-    const handleDeleteSchedule = (id) => {
-        // Logic to delete a schedule
-        console.log(id);
-        fetch(`https://mi-linux.wlv.ac.uk/~2332813/demo/server/delete.php?q=OpenDayLectures&id=${id}`, {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-                setjsonScheduleData(jsonScheduleData.filter(item => item.lecture_id !== id));
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
-    }
+
+
     const handleDeleteClassroom = (id) => {
-        // Logic to delete a classroom
-        console.log(id);
-        fetch(`http://localhost/server/delete.php?q=Classrooms&id=${id}`, {
-            method: 'DELETE',
+        fetch('http://localhost/server/deleteRecord.php', {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-                setjsonClassroomData(jsonClassroomData.filter(item => item.classroom_id !== id));
+            body: JSON.stringify({
+                table: 'classrooms',
+                id: id
+
             })
-            .catch((error) => {
+        })
+            .then(res => res.json())
+            .then(data => {
+                setjsonClassroomData(jsonClassroomData.filter(item => item.id !== id));
+            })
+            .catch(error => {
                 console.error('Error:', error);
             });
     }
+
     const handleDeleteLecturer = (id) => {
-        // Logic to delete a lecturer
-        console.log(id);
-        fetch(`https://mi-linux.wlv.ac.uk/~2332813/demo/server/delete.php?q=Teachers&id=${id}`, {
-            method: 'DELETE',
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-                setjsonLecturerData(jsonLecturerData.filter(item => item.teacher_id !== id));
+        fetch('http://localhost/server/deleteRecord.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                table: 'teachers',
+                id: id
             })
-            .catch((error) => {
+        })
+            .then(res => res.json())
+            .then(data => {
+                setjsonLecturerData(jsonLecturerData.filter(item => item.id !== id));
+            })
+            .catch(error => {
                 console.error('Error:', error);
             });
     }
@@ -261,7 +265,8 @@ const Admin = () => {
                 <div style={styles.tableContainer}>
                 <table style={styles.table}>
                     <thead style={styles.thead}>
-                        <tr>
+                            <tr>
+                                <th>Lecture ID</th>
                             <th>Lecture Time</th>
                             <th>Topic</th>
                             <th>Lecturer</th>
@@ -272,7 +277,8 @@ const Admin = () => {
 
                     <tbody style={styles.tbody}>
                         {DisplayScheduleData}
-                        <tr>
+                            <tr>
+                                <td></td>
                             <td><input id='time' type="text" placeholder="Lecture Time" /></td>
                             <td><input id='topic' type="text" placeholder="Topic" /></td>
                             <td><input id='lecturer_id' type="text" placeholder="Lecturer ID" /></td>
@@ -288,7 +294,8 @@ const Admin = () => {
                 <div style={styles.tableContainer}>
                 <table style={styles.table}>
                     <thead style={styles.thead}>
-                    <tr>
+                            <tr>
+                                <th>Room ID</th>
                         <th>Room Number</th>
                         <th>Building</th>
                         <th>Capacity</th>
@@ -299,7 +306,8 @@ const Admin = () => {
 
                 <tbody>
                         {DisplayClassroomData}
-                        <tr>
+                            <tr>
+                            <td></td>
                             <td><input id='room_number' type="text" placeholder="Room Number" /></td>
                             <td><input id='building_id' type="text" placeholder="Building ID" /></td>
                             <td><input id='capacity' type="text" placeholder="Capacity" /></td>
@@ -315,7 +323,8 @@ const Admin = () => {
                 <div style={styles.tableContainer}>
                 <table style={styles.table}>
                     <thead style={styles.thead}>
-                        <tr>
+                            <tr>
+                                <th>Lecturer ID</th>
                             <th>Name</th>
                             <th>Email</th>
                             <th>Course_ID</th>
@@ -325,7 +334,8 @@ const Admin = () => {
 
                     <tbody>
                         {DisplayLecturerData}
-                        <tr>
+                            <tr>
+                                <td></td>
                             <td><input id='name' type="text" placeholder="Name" /></td>
                             <td><input id='email' type="text" placeholder="Email" /></td>
                             <td><input id='course_l_id' type="text" placeholder="Course ID" /></td>

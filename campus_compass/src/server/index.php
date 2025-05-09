@@ -2,7 +2,7 @@
 header("Access-Control-Allow-Origin: *");
 
 // Database connection
-$mysqli = new mysqli("mi-linux.wlv.ac.uk", "2384101", "11tp7w", "db2384101");
+$mysqli = new mysqli("localhost", "root", "", "campuscompass");
 
 // Check connection
 if ($mysqli->connect_error) {

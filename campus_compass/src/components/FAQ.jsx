@@ -167,21 +167,27 @@ const FAQ = () => {
 
     // Function to handle the message submission
     const handleSubmit = (message) => {
+        const newMessage = {
+            message: message,
+        }
+        console.log('Message submitted:', message);
+        console.log(JSON.stringify(message)); // Log the length of the message
         // Check if the message is empty
         if (message.trim() === '') {
             alert('Please enter a message before submitting.');
         }
 
-        fetch('https://mi-linux.wlv.ac.uk/~2332813/demo/server/post.php?q=Feedback', {
+        fetch('http://localhost/server/post.php?q=Feedback', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(message)
+            body: JSON.stringify(newMessage)
         })
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
+                alert('Message sent successfully!'); // Notify the user of success
             })
             .catch((error) => {
                 console.error('Error:', error);
