@@ -103,6 +103,65 @@ const Admin = () => {
         }
     )
 
+    const [jsonCourseData, setjsonCourseData] = useState([]);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('http://localhost/server/index.php?q=Courses');
+                const data = await response.json();
+                setjsonCourseData(data);
+            }
+            catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        fetchData();
+    }, []);
+    const DisplayCourseData = jsonCourseData.map(
+        (item) => {
+            return (
+                <tr key={item.id}>
+                    <td>{item.id}</td>
+                    <td>{item.course_name}</td>
+                    <td>{item.department}</td>
+                    <td>
+                        <button onClick={() => handleDeleteCourse(item.id)}>Delete</button>
+                    </td>
+                </tr>
+            )
+        }
+    )
+
+    const [jsonBuildingData, setjsonBuildingData] = useState([]);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('http://localhost/server/index.php?q=Buildings');
+                const data = await response.json();
+                setjsonBuildingData(data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        fetchData();
+    }, []);
+    const displayBuildingData = jsonBuildingData.map(
+        (item) => {
+            return (
+                <tr key={item.id}>
+                    <td>{item.id}</td>
+                    <td>{item.building_name}</td>
+                    <td>
+                        <button onClick={() => handleDeleteBuilding(item.id)}>Delete</button>
+                    </td>
+                </tr>
+
+            )
+        }
+    )
+
+
+
     const handleAddSchedule = () => {
         const newSchedule = {
             lecture_time: document.getElementById('time').value,
@@ -186,6 +245,53 @@ const Admin = () => {
         document.getElementById('course_l_id').value = '';
     }
 
+    const handleAddCourse = () => {
+        const newCourse = {
+            course_name: document.getElementById('course_name').value,
+            department: document.getElementById('department').value
+        };
+        // Send the new course to the server
+        fetch('http://localhost/server/post.php?q=Courses', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newCourse)
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                setjsonCourseData([...jsonCourseData, newCourse]);
+            })
+        // Clear the input fields after adding the course
+        document.getElementById('course_name').value = '';
+        document.getElementById('department').value = '';
+    }
+
+    const handleAddBuilding = () => {
+        const newBuilding = {
+            building_name: document.getElementById('building_name').value
+        };
+        // Send the new building to the server
+        fetch('http://localhost/server/post.php?q=Buildings', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newBuilding)
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                setjsonBuildingData([...jsonBuildingData, newBuilding]);
+            })
+        // Clear the input fields after adding the building
+        document.getElementById('building_name').value = '';
+    }
+
+
+
+
 
     const handleDeleteSchedule = (id) => {
         // Logic to delete a schedule
@@ -251,6 +357,50 @@ const Admin = () => {
             });
     }
 
+    const handleDeleteCourse = (id) => {
+        fetch('http://localhost/server/deleteRecord.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                table: 'courses',
+                id: id
+            })
+        })
+            .then(res => res.json())
+            .then(data => {
+                setjsonCourseData(jsonCourseData.filter(item => item.id !== id));
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+
+    const handleDeleteBuilding = (id) => {
+        fetch('http://localhost/server/deleteRecord.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                table: 'buildings',
+                id: id
+            })
+        })
+            .then(res => res.json())
+            .then(data => {
+                setjsonBuildingData(jsonBuildingData.filter(item => item.id !== id));
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+
+
+
+
+
 
 
     return (
@@ -299,7 +449,7 @@ const Admin = () => {
                         <th>Room Number</th>
                         <th>Building</th>
                         <th>Capacity</th>
-                        <th>Course</th>
+                        <th>Course ID</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -327,7 +477,7 @@ const Admin = () => {
                                 <th>Lecturer ID</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Course_ID</th>
+                            <th>Course ID</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -344,11 +494,58 @@ const Admin = () => {
                     </tbody>
                     </table>
                 </div>
+                <h2>Manage Courses</h2>
+                <div style={styles.tableContainer}>
+                    <table style={styles.table}>
+                        <thead style={styles.thead}>
+                            <tr>
+                                <th>Course ID</th>
+                                <th>Course Name</th>
+                                <th>Department</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {DisplayCourseData}
+                            <tr>
+                                <td></td>
+                                <td><input id='course_name' type="text" placeholder="Course Name" /></td>
+                                <td><input id='department' type="text" placeholder="Department" /></td>
+                                <td><button onClick={() => handleAddCourse()}>Add</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
+                <h2>Manage Buildings</h2>
+                <div style={styles.tableContainer}>
+                    <table style={styles.table}>
+                        <thead style={styles.thead}>
+                            <tr>
+                                <th>Building ID</th>
+                                <th>Building Name</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {displayBuildingData}
+                            <tr>
+                                <td></td>
+                                <td><input id='building_name' type="text" placeholder="Building Name" /></td>
+                                <td><button onClick={() => handleAddBuilding()}>Add</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
             </div>
         </div>
     )
 }
+
+
+
+
+
 
 const styles = {
     // Centers the table content and adds some padding
